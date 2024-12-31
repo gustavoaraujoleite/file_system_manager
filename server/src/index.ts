@@ -1,13 +1,13 @@
 import express from "express";
+require("dotenv").config();
 
 const app = express();
 
-const PORT = 8080;
+import fileManaging from "./routes/file/index";
 
-app.get("/", (req, res) => {
-  res.send("Succesfull");
-});
+app.use("/files", fileManaging);
 
-app.listen(PORT, () => {
-  console.log("REST API server ready at: http://localhost:" + PORT);
+const port = process.env.EXPRESS_PORT;
+app.listen(port, () => {
+  console.log("REST API server ready at: http://localhost:" + port);
 });
