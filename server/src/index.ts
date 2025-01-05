@@ -3,7 +3,7 @@ require("dotenv").config();
 
 const app = express();
 
-import fileManaging from "./routes/file/index";
+import fileManaging from "./routes/file/file-route";
 
 app.use("/files", fileManaging);
 

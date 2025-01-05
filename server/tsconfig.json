@@ -1,11 +1,19 @@
 {
   "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    
     "sourceMap": true,
     "rootDir": "./src",
     "outDir": "./dist",
     "strict": true,
     "lib": ["esnext"],
     "esModuleInterop": true
+
   },
-  "exclude": ["__mocks__", "__tests__"]
+  "exclude": ["__mocks__", "__tests__"],
+  "include": ["src/**/*", "test/**/*"]
+
 }
